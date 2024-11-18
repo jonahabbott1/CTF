@@ -14,3 +14,4 @@ Install flask:
 
 To run, simply run main.py in the terminal after installing flask, make sure you are in the directory where main.py is located:
 
+![Screenshot of the application](Screenshot%202024-11-18%20160016.png "Screenshot 2024-11-18 160016")
