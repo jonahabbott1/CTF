@@ -1,4 +1,4 @@
-DESCRIPTION: Python flask app to test sql injection.
+DESCRIPTION: Python flask app to test sql injection. The flag is hidden behin a login wall
 
 Requirements:
 
