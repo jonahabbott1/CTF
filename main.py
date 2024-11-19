@@ -1,6 +1,6 @@
 from flask import Flask, request, render_template_string
 import sqlite3
-from flask_httpauth import HTTPBasicAuth
+import base64
 
 app = Flask(__name__)
 
@@ -96,42 +96,43 @@ login_page = """
     </body>
 </html>
 """
-
-secret_page = """
-<!doctype html>
-<html lang="en">
-    <head>
-        <title>Secret Password</title>
-        <style>
-            body {
-                background-color: #121212;
-                color: #cc3535;
-                font-family: Arial, sans-serif;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                height: 100vh;
-                margin: 0;
-            }
-            h1 {
-                color: #cc3535;
-            }
-            p {
-                font-size: 18px;
-                color: #cc3535;
-            }
-            strong {
-                color: #cc3535;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>Welcome!</h1>
-        <p>The secret password is: <strong>secretflaghere</strong></p>
-    </body>
-</html>
-"""
+string = 'YmFqYWJsYXN0aXNiZXN0'
+pswd = base64.b64decode(string).decode()
+secret_page = f"""
+    <!doctype html>
+    <html lang="en">
+        <head>
+            <title>Secret Password</title>
+            <style>
+                body {{
+                    background-color: #121212;
+                    color: #cc3535;
+                    font-family: Arial, sans-serif;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100vh;
+                    margin: 0;
+                }}
+                h1 {{
+                    color: #cc3535;
+                }}
+                p {{
+                    font-size: 18px;
+                    color: #cc3535;
+                }}
+                strong {{
+                    color: #cc3535;
+                }}
+            </style>
+        </head>
+        <body>
+            <h1>Welcome!</h1>
+            <p>The secret password is: <strong>{pswd}</strong></p>
+        </body>
+    </html>
+    """
 
 # Routes
 @app.route("/", methods=["GET", "POST"])
