@@ -1,4 +1,4 @@
-DECRIPTION: Python flask app to test sql injection.
+DESCRIPTION: Python flask app to test sql injection.
 
 Requirements:
 
