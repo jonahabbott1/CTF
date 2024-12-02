@@ -12,6 +12,6 @@ Install flask:
    ```bash
    pip install flask
 
-To run, simply run main.py in the terminal after installing flask, make sure you are in the directory where main.py is located. Then click on the url provided hosting the site.
+To run, run main.py in the terminal after installing flask, make sure you are in the directory where main.py is located along with the folder 'static'. Then click on the url provided hosting the site.
 
 ![Screenshot of the application](Screenshot%202024-11-18%20160016.png "Screenshot 2024-11-18 160016")
