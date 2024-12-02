@@ -96,13 +96,11 @@ login_page = """
     </body>
 </html>
 """
-string = 'YmFqYWJsYXN0aXNiZXN0'
-pswd = base64.b64decode(string).decode()
 secret_page = f"""
     <!doctype html>
     <html lang="en">
         <head>
-            <title>Secret Password</title>
+            <title>Secrete Files</title>
             <style>
                 body {{
                     background-color: #121212;
@@ -112,7 +110,7 @@ secret_page = f"""
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
-                    height: 100vh;
+                    height: 50vh;
                     margin: 0;
                 }}
                 h1 {{
@@ -125,11 +123,29 @@ secret_page = f"""
                 strong {{
                     color: #cc3535;
                 }}
+                a {{
+                    color: red;
+                    text-decoration: none;
+                }}
+
+                a:hover {{
+                    color: darkred;
+                    text-decoration: underline;
+                }}
             </style>
         </head>
         <body>
-            <h1>Welcome!</h1>
-            <p>The secret password is: <strong>{pswd}</strong></p>
+        <h1>Secret Files</h1>
+            <ul>
+                <li><a href="static/downloads/file1.txt" download>Download File 1</a></li>
+                <li><a href="static/downloads/file2.txt" download>Download File 2</a></li>
+                <li><a href="static/downloads/file3.txt" download>Download File 3</a></li>
+                <li><a href="static/downloads/file4.txt" download>Download File 4</a></li>
+                <li><a href="static/downloads/file5.txt" download>Download File 5</a></li>
+                <li><a href="static/downloads/file6.txt" download>Download File 6</a></li>
+                <li><a href="static/downloads/md5hash.txt" download>Download hash</a></li>
+                <li><a href="static/downloads/private.key" download>Download private key</a></li>
+            </ul>
         </body>
     </html>
     """
