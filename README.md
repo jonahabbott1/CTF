@@ -8,7 +8,7 @@ DESCRIPTION: Python flask app ctf challenge.
 <details>
   <summary>Hint 2</summary>
 
-  Only 1 of the 6 secret files is need to find the flag, what do you know about hashes?
+  Only 1 of the 6 secret files is needed to find the flag, what do you know about hashes?
 
 </details>
 
