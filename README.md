@@ -15,17 +15,16 @@ DESCRIPTION: Python flask app ctf challenge.
 
 These will provide useful in your search for the flag:
 
-https://md5file.com/calculator -use this with the provided hash file to find the correct file
+https://md5file.com/calculator 
 
 https://www.devglan.com/online-tools/rsa-encryption-decryption
-use this to decrypt the correct file with the private key, keep all settings default!
 
 
 Requirements:
 
 - Python
 
-- flask module
+- flask web framework
 
 Install flask:
 
